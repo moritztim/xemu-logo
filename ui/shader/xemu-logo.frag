@@ -154,10 +154,14 @@ float getParticles(vec2 uv)
 
 void mainImage(out vec4 out_Color, in vec2 fragCoord)
 {
-    vec2 uv = fragCoord/vec2(512);
+    vec2 uv = fragCoord/iResolution.xy;
     float scale = 1.4;
     uv -= 0.5 * (1.-1./scale);
     uv *= scale;
+
+    float screenAspect = iResolution.x / iResolution.y;
+    uv.x = (uv.x - 0.5) * screenAspect + 0.5;
+    
     vec2 pos = uv;
 
     vec3 msd = texture(iChannel0, vec2(pos.x, pos.y)).rgb;
