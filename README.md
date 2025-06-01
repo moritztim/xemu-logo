@@ -1,7 +1,10 @@
 # xemu logo animation
 _Standalone xemu logo shader animation_
 
-![render](renders/800x400.webm)
+<video width="640" height="360" controls>
+  <source src="renders/800x400.webm" type="video/webm">
+  Failed to play video. View it at <a href="renders/800x400.webm">renders/800x400.webm</a>.
+</video>
 
 # How to render
 1. Install the [Shadertoy Custom Textures](https://github.com/ahillss/ShadertoyCustomTextures) browser extension.
