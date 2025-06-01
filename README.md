@@ -1,7 +1,7 @@
 # xemu logo animation
 _Standalone xemu logo shader animation_
 
-![render](renders/800x400.gif)
+![render](renders/800x450.gif)
 
 # How to render
 1. Install the [Shadertoy Custom Textures](https://github.com/ahillss/ShadertoyCustomTextures) browser extension.
