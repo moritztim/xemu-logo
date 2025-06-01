@@ -1,6 +1,3 @@
-uniform float scale;
-uniform float iTime;
-out vec4 out_Color;
 // iChannel0 contains logo_sdf.png
 const vec4 in_ColorPrimary = vec4(0.384, 0.792, 0.075, 1.0); // Green
 const vec4 in_ColorFill = vec4(0.0, 0.0, 0.0, 1.0);          // Black
