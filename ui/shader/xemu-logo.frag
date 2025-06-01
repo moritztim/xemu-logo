@@ -1,4 +1,9 @@
-// iChannel0 contains logo_sdf.png
+// iChannel0:
+// File: logo_sdf.png
+// Filter: linear
+// Wrap: clamp
+// VFlip: true
+
 const vec4 in_ColorPrimary = vec4(0.384, 0.792, 0.075, 1.0); // Green
 const vec4 in_ColorFill = vec4(0.0, 0.0, 0.0, 1.0);          // Black
 
