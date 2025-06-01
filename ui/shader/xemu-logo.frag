@@ -1,7 +1,7 @@
-uniform sampler2D tex;
 uniform float scale;
 uniform float iTime;
 out vec4 out_Color;
+// iChannel0 contains logo_sdf.png
 const vec4 in_ColorPrimary = vec4(0.384, 0.792, 0.075, 1.0); // Green
 const vec4 in_ColorFill = vec4(0.0, 0.0, 0.0, 1.0);          // Black
 
@@ -163,7 +163,7 @@ void main()
     uv *= scale;
     vec2 pos = uv;
 
-    vec3 msd = texture(tex, vec2(pos.x, pos.y)).rgb;
+    vec3 msd = texture(iChannel0, vec2(pos.x, pos.y)).rgb;
     float sd = median(msd.r, msd.g, msd.b);
     float screenPxDistance = pxRange*(sd - 0.5);
     float opacity = clamp(screenPxDistance + 0.5, 0.0, 1.0);
