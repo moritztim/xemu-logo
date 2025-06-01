@@ -155,9 +155,9 @@ float getParticles(vec2 uv)
     return c;
 }
 
-void main()
+void mainImage(out vec4 out_Color, in vec2 fragCoord)
 {
-    vec2 uv = gl_FragCoord.xy/vec2(512);
+    vec2 uv = fragCoord/vec2(512);
     float scale = 1.4;
     uv -= 0.5 * (1.-1./scale);
     uv *= scale;
