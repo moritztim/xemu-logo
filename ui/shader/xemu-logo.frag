@@ -184,4 +184,6 @@ void mainImage(out vec4 out_Color, in vec2 fragCoord)
     out_Color += fill_color*mask_rhs*getSpotlights(uv);
     out_Color += mix(vec4(0), fgColor, getParticles(uv));
     out_Color += 2.*fgColor*getBox(uv, textPos.x, textPos.z)*getGradients(uv);
+	 
+    out_Color.rgb *= out_Color.a;
 }
